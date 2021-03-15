@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarsController!{% endblock %}
+
+{% block body %}
+
+
+
+
+<table>
+    <thead>
+    <tr>
+
+        <th>Car</th>
+        <th>Fuel</th>
+        <th>Vrt</th>
+
+    </tr>
+    </thead>
+
+    <tbody>{% for car in cars %}
+
+
+        <td> {{ car.makeModel }}</td>
+        <td> {{ car.fuel }}</td>
+        <td> {{ car.vrt }}</td>
+
+    {% endfor %}</tbody>
+
+
+        </table>
+
+    <style>
+
+            table,tr,td{
+                border:0.1rem solid black;
+            }
+        </style>
+{% endblock %}
